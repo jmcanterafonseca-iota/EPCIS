@@ -3,32 +3,27 @@
         "@protected": true,
         "@version": 1.1,
         "epcis": "https://ns.gs1.org/epcis/",
-        "cbv": "https://ns.gs1.org/cbv/",
-        "vtype": "urn:epcglobal:epcis:vtype:",
-        "cbvmda": "urn:epcglobal:cbv:mda:",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        
         "owl": "http://www.w3.org/2002/07/owl#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "dcterms": "http://purl.org/dc/terms/",
-        "gs1": "https://gs1.org/voc/",
+
         "id": "@id",
         "isA": "@type",
+
         "ObjectEvent": "epcis:ObjectEvent",
         "AggregationEvent": "epcis:AggregationEvent",
         "TransformationEvent": "epcis:TransformationEvent",
         "AssociationEvent": "epcis:AssociationEvent",
         "TransactionEvent": "epcis:TransactionEvent",
+        "EPCISDocument": "epcis:EPCISDocument",
+
         "eventTime": {
             "@id": "epcis:eventTime",
             "@type": "xsd:dateTimeStamp"
         },
         "recordTime": {
             "@id": "epcis:recordTime",
-            "@type": "xsd:dateTimeStamp"
-        },
-        "declarationTime": {
-            "@id": "epcis:declarationTime",
             "@type": "xsd:dateTimeStamp"
         },
         "eventTimeZoneOffset": "epcis:eventTimeZoneOffset",
@@ -86,22 +81,36 @@
                 }
             }
         },
-        "quantityList": {
-            "@id": "epcis:quantityList",
+        "persistentDisposition": {
+            "@id": "epcisPersistentDisposition",
             "@container": "@set",
             "@context": {
                 "@protected": true,
                 "epcis": "https://ns.gs1.org/epcis/",
-                "quantity": {
-                    "@id": "epcis:quantity",
-                    "@type": "xsd:double"
+                "set": {
+                    "@id": "epcis:set",
+                    "@type": "@id",
+                    "@container": "@set"
                 },
-                "epcClass": {
-                    "@id": "epc:epcClass",
-                    "@type": "@id"
-                },
-                "uom": "epcis:uom"
+                "unset": {
+                    "@id": "epcis:unset",
+                    "@type": "@id",
+                    "@container": "@set"
+                }
             }
+        },
+        "quantity": {
+            "@id": "epcis:quantity",
+            "@type": "xsd:double"
+        },
+        "epcClass": {
+            "@id": "epc:epcClass",
+            "@type": "@id"
+        },
+        "uom": "epcis:uom",
+        "quantityList": {
+            "@id": "epcis:quantityList",
+            "@container": "@set"
         },
         "bizTransactionList": {
             "@id": "epcis:bizTransaction",
@@ -127,6 +136,24 @@
         },
         "childQuantityList": {
             "@id": "epcis:childQuantityList",
+            "@container": "@set"
+        },
+        "inputEPCList": {
+            "@id": "epcis:inputEPCList",
+            "@container": "@set",
+            "@type": "@id"
+        },
+        "outputEPCList": {
+            "@id": "epcis:outputEPCList",
+            "@container": "@set",
+            "@type": "@id"
+        },
+        "inputQuantityList": {
+            "@id": "epcis:inputQuantityList",
+            "@container": "@set"
+        },
+        "outputQuantityList": {
+            "@id": "epcis:outputQuantityList",
             "@container": "@set"
         },
         "sensorElementList": {
@@ -234,64 +261,40 @@
 				"percValue": {
                     "@id": "epcis:percValue",
 					"@type": "xsd:double"
-				},
-				"uom": "epcis:uom"
+				}
             }
         },
         
-        "certificationInfo": {
-            "@type": "@id"
-        },
-        
-       
         "children": {
-            "@type": "@id"
-        },
-        "inputEPCList": {
-            "@type": "@id"
-        },
-        "outputEPCList": {
-            "@type": "@id"
-        },
-        "inputQuantityList": {
-            "@type": "@id"
-        },
-        "outputQuantityList": {
-            "@type": "@id"
-        },
-        
-        "persistentDisposition": {
+            "@id": "epcis:children",
+            "@container": "@set",
             "@type": "@id"
         },
        
-        
-        "reason": {
-            "@type": "@id"
-        },
         "errorDeclaration": {
-            "@type": "@id"
+            "@id": "epcis:errorDeclaration",
+            "@context": {
+                "@protected": true,
+                "epcis": "https://ns.gs1.org/epcis/",
+                "reason": {
+                    "@id": "epcis:reason",
+                    "@type": "@vocab"
+                },
+                "correctiveEventIDs": {
+                    "@id": "epcis:correctiveEventIDs",
+                    "@container": "@set"
+                },
+                "declarationTime": {
+                    "@id": "epcis:declarationTime",
+                    "@type": "xsd:dateTimeStamp"
+                }
+            }
         },
-        "correctiveEventIDs": {
-            "@type": "@id"
-        },
-        
-        "set": {
-            "@type": "@id"
-        },
-        "unset": {
-            "@type": "@id"
-        },
-        
        
-       
-        "eventID": "@id",
-        "creationDate": {
-            "@id": "dcterms:created",
-            "@type": "xsd:dateTime"
+        "eventID": {
+            "@id": "epcis:eventID"
         },
-        "schemaVersion": {
-            "@id": "owl:versionInfo",
-            "@type": "xsd:string"
-        }
+        "creationDate": "dcterms:created",
+        "schemaVersion": "owl:versionInfo"
     }
 }
