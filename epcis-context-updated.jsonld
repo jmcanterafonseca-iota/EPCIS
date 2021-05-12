@@ -4,11 +4,14 @@
         "@version": 1.1,
         "epcis": "https://ns.gs1.org/epcis/",
         
+        "gs1": "https://gs1.org/voc/",
+
         "owl": "http://www.w3.org/2002/07/owl#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "dcterms": "http://purl.org/dc/terms/",
 
         "id": "@id",
+        "type": "@type",
         "isA": "@type",
 
         "ObjectEvent": "epcis:ObjectEvent",
@@ -16,7 +19,6 @@
         "TransformationEvent": "epcis:TransformationEvent",
         "AssociationEvent": "epcis:AssociationEvent",
         "TransactionEvent": "epcis:TransactionEvent",
-        "EPCISDocument": "epcis:EPCISDocument",
 
         "eventTime": {
             "@id": "epcis:eventTime",
@@ -33,12 +35,12 @@
             "@type": "@vocab"
         },
         "bizStep": {
-            "@context": "https://gs1.github.io/EPCIS/epcis-context-bizstep.jsonld",
+            "@context": "https://gs1.github.io/EPCIS/cbv-context-bizstep.jsonld",
             "@id": "epcis:bizStep",
             "@type": "@vocab"
         },
         "disposition": {
-            "@context": "https://gs1.github.io/EPCIS/epcis-context-disposition.jsonld",
+            "@context": "https://gs1.github.io/EPCIS/cbv-context-disposition.jsonld",
             "@id": "epcis:disposition",
             "@type": "@vocab"
         },
@@ -58,28 +60,32 @@
         "sourceList": {
             "@id": "epcis:sourceList",
             "@container": "@set",
-            "@context": {
-                "@protected": true,
-                "epcis": "https://ns.gs1.org/epcis/",
-                "type": "@type",
-                "source": {
-                    "@id": "epcis:source",
-                    "@type": "@id"
+            "@context": [
+                "https://gs1.github.io/EPCIS/cbv-context-sourcedest-type.jsonld",
+                {
+                    "@protected": true,
+                    "epcis": "https://ns.gs1.org/epcis/",
+                    "source": {
+                        "@id": "epcis:source",
+                        "@type": "@id"
+                    }
                 }
-            }
+            ]
         },
         "destinationList": {
             "@id": "epcis:destinationList",
             "@container": "@set",
-            "@context": {
-                "@protected": true,
-                "epcis": "https://ns.gs1.org/epcis/",
-                "type": "@type",
-                "destination": {
-                    "@id": "epcis:destination",
-                    "@type": "@id"
+            "@context": [
+                "https://gs1.github.io/EPCIS/cbv-context-sourcedest-type.jsonld",
+                {
+                    "@protected": true,
+                    "epcis": "https://ns.gs1.org/epcis/",
+                    "destination": {
+                        "@id": "epcis:destination",
+                        "@type": "@id"
+                    }
                 }
-            }
+            ]
         },
         "persistentDisposition": {
             "@id": "epcisPersistentDisposition",
@@ -115,15 +121,17 @@
         "bizTransactionList": {
             "@id": "epcis:bizTransaction",
             "@container": "@set",
-            "@context": {
-                "@protected": true,
-                "epcis": "https://ns.gs1.org/epcis/",
-                "type": "@type",
-                "bizTransaction": {
-                    "@id": "epcis:bizTransaction",
-                    "@type": "xsd:anyURI"
+            "@context": [
+                "https://gs1.github.io/EPCIS/cbv-context-biztransaction-type.jsonld",
+                {
+                    "@protected": true,
+                    "epcis": "https://ns.gs1.org/epcis/",
+                    "bizTransaction": {
+                        "@id": "epcis:bizTransaction",
+                        "@type": "xsd:anyURI"
+                    }
                 }
-            }
+            ]
         },
         "parentID": {
             "@id": "epcis:parentID",
@@ -156,6 +164,7 @@
             "@id": "epcis:outputQuantityList",
             "@container": "@set"
         },
+
         "sensorElementList": {
             "@id": "epcis:sensorElementList",
             "@container": "@set",
@@ -264,31 +273,28 @@
 				}
             }
         },
-        
-        "children": {
-            "@id": "epcis:children",
-            "@container": "@set",
-            "@type": "@id"
-        },
        
         "errorDeclaration": {
             "@id": "epcis:errorDeclaration",
-            "@context": {
-                "@protected": true,
-                "epcis": "https://ns.gs1.org/epcis/",
-                "reason": {
-                    "@id": "epcis:reason",
-                    "@type": "@vocab"
-                },
-                "correctiveEventIDs": {
-                    "@id": "epcis:correctiveEventIDs",
-                    "@container": "@set"
-                },
-                "declarationTime": {
-                    "@id": "epcis:declarationTime",
-                    "@type": "xsd:dateTimeStamp"
+            "@context": [
+                "https://gs1.github.io/EPCIS/cbv-context-error-reason.jsonld",
+                {
+                    "@protected": true,
+                    "epcis": "https://ns.gs1.org/epcis/",
+                    "reason": {
+                        "@id": "epcis:reason",
+                        "@type": "@vocab"
+                    },
+                    "correctiveEventIDs": {
+                        "@id": "epcis:correctiveEventIDs",
+                        "@container": "@set"
+                    },
+                    "declarationTime": {
+                        "@id": "epcis:declarationTime",
+                        "@type": "xsd:dateTimeStamp"
+                    }
                 }
-            }
+            ]
         },
        
         "eventID": {
@@ -303,12 +309,19 @@
             "@container": "@graph"
         },
 
+        "EPCISDocument": "epcis:EPCISDocument",
         "epcisHeader": "epcis:epcisHeader",
         "epcisBody": "epcis:epcisBody",
 
         "eventList": {
             "@id": "epcis:eventList",
             "@container": "@graph"
+        },
+
+        "children": {
+            "@id": "epcis:children",
+            "@container": "@set",
+            "@type": "@id"
         }
     }
 }

@@ -1,0 +1,30 @@
+{
+    "@context": {
+        "@protected": true,
+        "@version": 1.1,
+        "cbv": "https://ns.gs1.org/cbv/",
+        "disposition": "cbv:Disp-",
+        "active": "disposition:active",
+        "container_closed": "disposition:container_closed",
+        "damaged": "disposition:damaged",
+        "destroyed": "disposition:destroyed",
+        "dispensed": "disposition:dispensed",
+        "disposed": "disposition:disposed",
+        "encoded": "disposition:encoded",
+        "expired": "disposition:expired",
+        "in_progress": "disposition:in_progress",
+        "in_transit": "disposition:in_transit",
+        "inactive": "disposition:inactive",
+        "no_pedigree_match": "disposition:no_pedigree_match",
+        "non_sellable_other": "disposition:non_sellable_other",
+        "partially_dispensed": "disposition:partially_dispensed",
+        "recalled": "disposition:recalled",
+        "reserved": "disposition:reserved",
+        "retail_sold": "disposition:retail_sold",
+        "returned": "disposition:returned",
+        "sellable_accessible": "disposition:sellable_accessible",
+        "sellable_not_accessible": "disposition:sellable_not_accessible",
+        "stolen": "disposition:stolen",
+        "unknown": "disposition:unknown"
+    }
+}
