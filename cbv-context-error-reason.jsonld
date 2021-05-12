@@ -3,9 +3,8 @@
         "@protected": true,
         "@version": 1.1,
         "cbv": "https://ns.gs1.org/cbv/",
-        "error": "cbv:ER-",
-
-        "did_not_occur":  "error:did_not_occur",
-        "incorrect_data": "error:incorrect_data"
+        
+        "did_not_occur":  "cbv:ER-did_not_occur",
+        "incorrect_data": "cbv:ER-incorrect_data"
     }
 }
