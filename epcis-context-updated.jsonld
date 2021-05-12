@@ -33,12 +33,12 @@
             "@id": "epcis:action"
         },
         "bizStep": {
-            "@context": "https://gs1.github.io/EPCIS/cbv-context-bizstep.jsonld",
+            "@context": "https://jmcanterafonseca-iota.github.io/EPCIS/cbv-context-bizstep.jsonld",
             "@id": "epcis:bizStep",
             "@type": "@vocab"
         },
         "disposition": {
-            "@context": "https://gs1.github.io/EPCIS/cbv-context-disposition.jsonld",
+            "@context": "https://jmcanterafonseca-iota.github.io/EPCIS/cbv-context-disposition.jsonld",
             "@id": "epcis:disposition",
             "@type": "@vocab"
         },
@@ -59,7 +59,7 @@
             "@id": "epcis:sourceList",
             "@container": "@set",
             "@context": [
-                "https://gs1.github.io/EPCIS/cbv-context-sourcedest-type.jsonld",
+                "https://jmcanterafonseca-iota.github.io/EPCIS/cbv-context-sourcedest-type.jsonld",
                 {
                     "@protected": true,
                     "epcis": "https://ns.gs1.org/epcis/",
@@ -74,7 +74,7 @@
             "@id": "epcis:destinationList",
             "@container": "@set",
             "@context": [
-                "https://gs1.github.io/EPCIS/cbv-context-sourcedest-type.jsonld",
+                "https://jmcanterafonseca-iota.github.io/EPCIS/cbv-context-sourcedest-type.jsonld",
                 {
                     "@protected": true,
                     "epcis": "https://ns.gs1.org/epcis/",
@@ -120,7 +120,7 @@
             "@id": "epcis:bizTransaction",
             "@container": "@set",
             "@context": [
-                "https://gs1.github.io/EPCIS/cbv-context-biztransaction-type.jsonld",
+                "https://jmcanterafonseca-iota.github.io/EPCIS/cbv-context-biztransaction-type.jsonld",
                 {
                     "@protected": true,
                     "epcis": "https://ns.gs1.org/epcis/",
@@ -275,7 +275,7 @@
         "errorDeclaration": {
             "@id": "epcis:errorDeclaration",
             "@context": [
-                "https://gs1.github.io/EPCIS/cbv-context-error-reason.jsonld",
+                "https://jmcanterafonseca-iota.github.io/EPCIS/cbv-context-error-reason.jsonld",
                 {
                     "@protected": true,
                     "epcis": "https://ns.gs1.org/epcis/",
