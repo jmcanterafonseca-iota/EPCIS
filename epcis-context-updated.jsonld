@@ -86,7 +86,7 @@
             ]
         },
         "persistentDisposition": {
-            "@id": "epcisPersistentDisposition",
+          "@id": "epcis:PersistentDisposition",
             "@container": "@set",
             "@context": {
                 "@protected": true,
@@ -108,7 +108,7 @@
             "@type": "xsd:double"
         },
         "epcClass": {
-            "@id": "epc:epcClass",
+            "@id": "epcis:epcClass",
             "@type": "@id"
         },
         "uom": "epcis:uom",
@@ -217,9 +217,9 @@
             }
         },
         "sensorReport": {
-            "@id": "epcisSensorReport",
+          "@id": "epcis:SensorReport",
             "@context": {
-                "protected": true,
+                "@protected": true,
                 "epcis": "https://ns.gs1.org/epcis/",
                 "type": "@type",
 				"microorganism": {
