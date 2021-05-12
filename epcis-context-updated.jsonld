@@ -30,9 +30,7 @@
         },
         "eventTimeZoneOffset": "epcis:eventTimeZoneOffset",
         "action": {
-            "@context": "https://gs1.github.io/EPCIS/epcis-context-action.jsonld",
-            "@id": "epcis:action",
-            "@type": "@vocab"
+            "@id": "epcis:action"
         },
         "bizStep": {
             "@context": "https://gs1.github.io/EPCIS/cbv-context-bizstep.jsonld",
