@@ -19,8 +19,6 @@
         "AssociationEvent": "epcis:AssociationEvent",
         "TransactionEvent": "epcis:TransactionEvent",
 
-        "type": "epcis:type",
-
         "eventTime": {
             "@id": "epcis:eventTime",
             "@type": "xsd:dateTimeStamp"
@@ -65,6 +63,10 @@
                     "source": {
                         "@id": "epcis:source",
                         "@type": "@id"
+                    },
+                    "type": {
+                        "@id": "epcis:type",
+                        "@type": "@vocab"
                     }
                 }
             ]
@@ -80,6 +82,10 @@
                     "destination": {
                         "@id": "epcis:destination",
                         "@type": "@id"
+                    },
+                    "type": {
+                        "@id": "epcis:type",
+                        "@type": "@vocab"
                     }
                 }
             ]
@@ -126,6 +132,10 @@
                     "bizTransaction": {
                         "@id": "epcis:bizTransaction",
                         "@type": "xsd:anyURI"
+                    },
+                    "type": {
+                        "@id": "epcis:type",
+                        "@type": "@vocab"
                     }
                 }
             ]
