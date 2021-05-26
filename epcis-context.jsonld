@@ -30,7 +30,7 @@
         "eventTimeZoneOffset": "epcis:eventTimeZoneOffset",
         "action": "epcis:action",
         "bizStep": {
-            "@context": "https://jmcanterafonseca-iota.github.io/EPCIS/cbv-context-bizstep.jsonld",
+            "@context": "https://jmcanterafonseca-iota.github.io/EPCIS/cbv-context-bizstep.jsonld", 
             "@id": "epcis:bizStep",
             "@type": "@vocab"
         },
