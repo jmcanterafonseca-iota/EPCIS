@@ -1,5 +1,5 @@
 {
-    "$id": "https://jmcanterafonseca-iota.github.io/EPCIS/JSON/modular-schema/schemas/definitions-JSON-Schema.json",
+    "$id": "https://jmcanterafonseca-iota.github.io/EPCIS/JSON/modular-schema/schemas/event-definitions-JSON-Schema.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "definitions": {
         "uri": {
@@ -97,7 +97,7 @@
                     "$ref": "#/definitions/time"
                 },
                 "reason": {
-                    "$ref": "#/definitions/uri"
+                    "$ref": "error-reason-JSON-Schema.json#/definitions/error-reason"
                 },
                 "correctiveEventIDs": {
                     "type": "array",
@@ -134,7 +134,7 @@
             "type": "object",
             "properties": {
                 "type": {
-                    "$ref": "#/definitions/uri"
+                    "$ref": "bizTransaction-type-JSON-Schema.json#/definitions/bizTransaction-type"
                 },
                 "bizTransaction": {
                     "$ref": "#/definitions/uri"
@@ -170,7 +170,7 @@
             "type": "object",
             "properties": {
                 "type": {
-                    "$ref": "#/definitions/uri"
+                    "$ref": "source-dest-type-JSON-Schema.json#/definitions/source-dest-type"
                 },
                 "source": {
                     "$ref": "#/definitions/uri"
@@ -185,7 +185,7 @@
             "type": "object",
             "properties": {
                 "type": {
-                    "$ref": "#/definitions/uri"
+                    "$ref": "source-dest-type-JSON-Schema.json#/definitions/source-dest-type"
                 },
                 "destination": {
                     "$ref": "#/definitions/uri"
