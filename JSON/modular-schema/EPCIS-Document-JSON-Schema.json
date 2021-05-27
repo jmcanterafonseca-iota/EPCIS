@@ -169,6 +169,7 @@
                 }
             },
             "required": [
+                "@context",
                 "schemaVersion",
                 "creationDate",
                 "epcisBody"
@@ -186,6 +187,7 @@
                 }
             },
             "required": [
+                "@context",
                 "epcisBody"
             ]
         },
