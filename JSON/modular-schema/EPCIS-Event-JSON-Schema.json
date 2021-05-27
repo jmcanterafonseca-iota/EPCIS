@@ -6,6 +6,9 @@
             "oneOf": [
                 {
                     "$ref": "schemas/ObjectEvent-JSON-Schema.json#/definitions/ObjectEvent"
+                },
+                {
+                    "$ref": "schemas/AggregationEvent-JSON-Schema.json#/definitions/AggregationEvent"
                 }
             ]
         }
