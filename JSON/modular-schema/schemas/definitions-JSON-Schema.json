@@ -20,6 +20,31 @@
             "type": "string",
             "pattern": "^[A-Fa-f0-9]+$"
         },
+        "@context": {
+            "anyOf": [
+                {
+                    "type": "string",
+                    "format": "uri"
+                },
+                {
+                    "type": "object"
+                },
+                {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                        "anyOf": [{
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "object"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
         "action": {
             "type": "string",
             "enum": [
@@ -299,6 +324,9 @@
         "Event": {
             "type": "object",
             "properties": {
+                "@context": {
+                    "$ref": "#/definitions/@context"
+                },
                 "eventTime": {
                     "$ref": "#/definitions/time"
                 },

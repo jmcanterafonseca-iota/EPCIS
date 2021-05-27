@@ -5,6 +5,9 @@
     "oneOf": [
         {
             "$ref": "EPCIS-Event-JSON-Schema.json#/definitions/EPCIS-Event"
+        },
+        {
+            "$ref": "EPCIS-Document-JSON-Schema.json#/definitions/EPCIS-Document"
         }
     ]
 }
