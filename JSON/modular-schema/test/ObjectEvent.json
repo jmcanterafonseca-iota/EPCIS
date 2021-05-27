@@ -2,7 +2,7 @@
     "eventID": "ni:///sha-256;df7bb3c352fef055578554f09f5e2aa41782150ced7bd0b8af24dd3ccb30ba69?ver=CBV2.0",
     "isA": "ObjectEvent",
     "action": "OBSERVE",
-    "bizStep": "urn:epcglobal:cbv:bizstep:shipping",
+    "bizStep": "shipping",
     "disposition": "urn:epcglobal:cbv:disp:in_transit",
     "epcList": ["urn:epc:id:sgtin:0614141.107346.2017","urn:epc:id:sgtin:0614141.107346.2018"],
     "eventTime": "2005-04-03T20:33:31.116000-06:00",

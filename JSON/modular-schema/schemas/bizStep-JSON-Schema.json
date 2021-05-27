@@ -1,0 +1,79 @@
+{
+    "$id": "https://jmcanterafonseca-iota.github.io/EPCIS/JSON/modular-schema/schemas/bizStep-JSON-Schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "bizStep": {
+            "anyOf": [
+                {
+                    "allOf": [
+                        {
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        {
+                            "type": "string",
+                            "not": {
+                                "pattern": "^cbv:"
+                            }
+                        },
+                        {
+                            "type": "string",
+                            "not": {
+                                "pattern": "^https://ns.gs1.org/cbv/"
+                            }
+                        },
+                        {
+                            "type": "string",
+                            "not": {
+                                "pattern": "^urn:epcglobal:cbv"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "enum": [
+                        "accepting",
+                        "arriving",
+                        "assembling",
+                        "collecting",
+                        "commissioning",
+                        "consigning",
+                        "creating_class_instance",
+                        "cycle_counting",
+                        "decommissioning",
+                        "departing",
+                        "destroying",
+                        "disassembling",
+                        "dispensing",
+                        "encoding",
+                        "entering_exiting",
+                        "holding",
+                        "inspecting",
+                        "installing",
+                        "killing",
+                        "loading",
+                        "other",
+                        "packing",
+                        "picking",
+                        "receiving",
+                        "removing",
+                        "repackaging",
+                        "repairing",
+                        "replacing",
+                        "reserving",
+                        "retail_selling",
+                        "shipping",
+                        "staging_outbound",
+                        "stock_taking",
+                        "stocking",
+                        "storing",
+                        "transporting",
+                        "unloading",
+                        "unpacking",
+                        "void_shipping"
+                    ]
+                }
+            ]
+        }
+    }
+}
