@@ -5,7 +5,7 @@
         "ObjectEvent": {
             "allOf": [
                 {
-                    "$ref": "definitions-JSON-Schema.json#/definitions/Event"
+                    "$ref": "event-definitions-JSON-Schema.json#/definitions/Event"
                 },
                 {
                     "type": "object",
@@ -15,13 +15,13 @@
                             "enum": ["ObjectEvent"]
                         },
                         "epcList": {
-                            "$ref": "definitions-JSON-Schema.json#/definitions/epcList"
+                            "$ref": "event-definitions-JSON-Schema.json#/definitions/epcList"
                         },
                         "quantityList": {
-                            "$ref": "definitions-JSON-Schema.json#/definitions/quantityList"
+                            "$ref": "event-definitions-JSON-Schema.json#/definitions/quantityList"
                         },
                         "action": {
-                            "$ref": "definitions-JSON-Schema.json#/definitions/action"
+                            "$ref": "event-definitions-JSON-Schema.json#/definitions/action"
                         },
                         "bizStep": {
                             "$ref": "bizStep-JSON-Schema.json#/definitions/bizStep"
@@ -30,40 +30,40 @@
                             "$ref": "disposition-JSON-Schema.json#/definitions/disposition"
                         },
                         "persistentDisposition": {
-                            "$ref": "definitions-JSON-Schema.json#/definitions/persistentDisposition"
+                            "$ref": "event-definitions-JSON-Schema.json#/definitions/persistentDisposition"
                         },
                         "readPoint": {
-                            "$ref": "definitions-JSON-Schema.json#/definitions/readPoint"
+                            "$ref": "event-definitions-JSON-Schema.json#/definitions/readPoint"
                         },
                         "bizLocation": {
-                            "$ref": "definitions-JSON-Schema.json#/definitions/bizLocation"
+                            "$ref": "event-definitions-JSON-Schema.json#/definitions/bizLocation"
                         },
                         "bizTransactionList": {
                             "type": "array",
                             "items": {
-                                "$ref": "definitions-JSON-Schema.json#/definitions/bizTransaction"
+                                "$ref": "event-definitions-JSON-Schema.json#/definitions/bizTransaction"
                             }
                         },
                         "sourceList": {
                             "type": "array",
                             "items": {
-                                "$ref": "definitions-JSON-Schema.json#/definitions/source"
+                                "$ref": "event-definitions-JSON-Schema.json#/definitions/source"
                             }
                         },
                         "destinationList": {
                             "type": "array",
                             "items": {
-                                "$ref": "definitions-JSON-Schema.json#/definitions/destination"
+                                "$ref": "event-definitions-JSON-Schema.json#/definitions/destination"
                             }
                         },
                         "sensorElementList": {
                             "type": "array",
                             "items": {
-                                "$ref": "definitions-JSON-Schema.json#/definitions/sensorElement"
+                                "$ref": "event-definitions-JSON-Schema.json#/definitions/sensorElement"
                             }
                         },
                         "ilmd": {
-                            "$ref": "definitions-JSON-Schema.json#/definitions/ilmd"
+                            "$ref": "event-definitions-JSON-Schema.json#/definitions/ilmd"
                         }
                     },
                     "required": [

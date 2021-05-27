@@ -6,7 +6,7 @@
             "type": "object",
             "properties": {
                 "type": {
-                    "$ref": "schemas/definitions-JSON-Schema.json#/definitions/uri"
+                    "$ref": "schemas/event-definitions-JSON-Schema.json#/definitions/uri"
                 },
                 "vocabularyElementList": {
                     "type": "array",
@@ -23,7 +23,7 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "schemas/definitions-JSON-Schema.json#/definitions/uri"
+                    "$ref": "schemas/event-definitions-JSON-Schema.json#/definitions/uri"
                 },
                 "attributes": {
                     "type": "array",
@@ -34,7 +34,7 @@
                 "children": {
                     "type": "array",
                     "items": {
-                        "$ref": "schemas/definitions-JSON-Schema.json#/definitions/uri"
+                        "$ref": "schemas/event-definitions-JSON-Schema.json#/definitions/uri"
                     }
                 }
             },
@@ -46,7 +46,7 @@
             "type": "object",
             "properties": {
                 "id": {
-                    "$ref": "schemas/definitions-JSON-Schema.json#/definitions/uri"
+                    "$ref": "schemas/event-definitions-JSON-Schema.json#/definitions/uri"
                 },
                 "attribute": {
                     "anyOf": [

@@ -5,7 +5,7 @@
         "TransactionEvent": {
             "allOf": [
                 {
-                    "$ref": "definitions-JSON-Schema.json#/definitions/Event"
+                    "$ref": "event-definitions-JSON-Schema.json#/definitions/Event"
                 },
                 {
                     "type": "object",
@@ -17,27 +17,27 @@
                         "bizTransactionList": {
                             "type": "array",
                             "items": {
-                                "$ref": "definitions-JSON-Schema.json#/definitions/bizTransaction"
+                                "$ref": "event-definitions-JSON-Schema.json#/definitions/bizTransaction"
                             },
                             "minItems": 1
                         },
                         "parentID": {
-                            "$ref": "definitions-JSON-Schema.json#/definitions/uri"
+                            "$ref": "event-definitions-JSON-Schema.json#/definitions/uri"
                         },
                         "epcList": {
                             "type": "array",
                             "items": {
-                                "$ref": "definitions-JSON-Schema.json#/definitions/uri"
+                                "$ref": "event-definitions-JSON-Schema.json#/definitions/uri"
                             }
                         },
                         "quantityList": {
                             "type": "array",
                             "items": {
-                                "$ref": "definitions-JSON-Schema.json#/definitions/quantityElement"
+                                "$ref": "event-definitions-JSON-Schema.json#/definitions/quantityElement"
                             }
                         },
                         "action": {
-                            "$ref": "definitions-JSON-Schema.json#/definitions/action"
+                            "$ref": "event-definitions-JSON-Schema.json#/definitions/action"
                         },
                         "bizStep": {
                             "$ref": "bizStep-JSON-Schema.json#/definitions/bizStep"
@@ -46,30 +46,30 @@
                             "$ref": "disposition-JSON-Schema.json#/definitions/disposition"
                         },
                         "persistentDisposition": {
-                            "$ref": "definitions-JSON-Schema.json#/definitions/persistentDisposition"
+                            "$ref": "event-definitions-JSON-Schema.json#/definitions/persistentDisposition"
                         },
                         "readPoint": {
-                            "$ref": "definitions-JSON-Schema.json#/definitions/readPoint"
+                            "$ref": "event-definitions-JSON-Schema.json#/definitions/readPoint"
                         },
                         "bizLocation": {
-                            "$ref": "definitions-JSON-Schema.json#/definitions/bizLocation"
+                            "$ref": "event-definitions-JSON-Schema.json#/definitions/bizLocation"
                         },
                         "sourceList": {
                             "type": "array",
                             "items": {
-                                "$ref": "definitions-JSON-Schema.json#/definitions/source"
+                                "$ref": "event-definitions-JSON-Schema.json#/definitions/source"
                             }
                         },
                         "destinationList": {
                             "type": "array",
                             "items": {
-                                "$ref": "definitions-JSON-Schema.json#/definitions/destination"
+                                "$ref": "event-definitions-JSON-Schema.json#/definitions/destination"
                             }
                         },
                         "sensorElementList": {
                             "type": "array",
                             "items": {
-                                "$ref": "definitions-JSON-Schema.json#/definitions/sensorElement"
+                                "$ref": "event-definitions-JSON-Schema.json#/definitions/sensorElement"
                             }
                         }
                     },
