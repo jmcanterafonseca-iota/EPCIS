@@ -12,7 +12,7 @@
                     "properties": {
                         "isA": {
                             "type": "string",
-                            "pattern": "^AggregationEvent$"
+                            "enum": ["AggregationEvent"]
                         },
                         "parentID": {
                             "$ref": "definitions-JSON-Schema.json#/definitions/uri"
@@ -116,5 +116,10 @@
                 }
             ]
         }
-    }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/AggregationEvent"
+        }
+    ]
 }

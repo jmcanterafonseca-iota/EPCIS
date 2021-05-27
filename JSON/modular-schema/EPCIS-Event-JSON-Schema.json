@@ -9,6 +9,9 @@
                 },
                 {
                     "$ref": "schemas/AggregationEvent-JSON-Schema.json#/definitions/AggregationEvent"
+                },
+                {
+                    "$ref": "schemas/AssociationEvent-JSON-Schema.json#/definitions/AssociationEvent"
                 }
             ]
         }
