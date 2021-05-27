@@ -33,7 +33,8 @@
                     "type": "array",
                     "uniqueItems": true,
                     "items": {
-                        "anyOf": [{
+                        "anyOf": [
+                            {
                                 "type": "string",
                                 "format": "uri"
                             },
@@ -320,6 +321,32 @@
         },
         "ilmd": {
             "type": "object"
+        },
+        "non-cbv-uri": {
+            "allOf": [
+                {
+                    "type": "string",
+                    "format": "uri"
+                },
+                {
+                    "type": "string",
+                    "not": {
+                        "pattern": "^cbv:"
+                    }
+                },
+                {
+                    "type": "string",
+                    "not": {
+                        "pattern": "^https://ns.gs1.org/cbv/"
+                    }
+                },
+                {
+                    "type": "string",
+                    "not": {
+                        "pattern": "^urn:epcglobal:cbv"
+                    }
+                }
+            ]
         },
         "Event": {
             "type": "object",

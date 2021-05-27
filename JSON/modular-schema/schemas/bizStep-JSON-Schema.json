@@ -5,30 +5,7 @@
         "bizStep": {
             "anyOf": [
                 {
-                    "allOf": [
-                        {
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        {
-                            "type": "string",
-                            "not": {
-                                "pattern": "^cbv:"
-                            }
-                        },
-                        {
-                            "type": "string",
-                            "not": {
-                                "pattern": "^https://ns.gs1.org/cbv/"
-                            }
-                        },
-                        {
-                            "type": "string",
-                            "not": {
-                                "pattern": "^urn:epcglobal:cbv"
-                            }
-                        }
-                    ]
+                    "$ref": "definitions-JSON-Schema.json#/definitions/non-cbv-uri"
                 },
                 {
                     "enum": [

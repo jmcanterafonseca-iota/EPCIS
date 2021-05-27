@@ -16,7 +16,7 @@
     ],
   
     "bizStep": "commissioning",
-    "disposition": "urn:epcglobal:cbv:disp:in_progress",
+    "disposition": "in_progress",
     "readPoint": {"id": "urn:epc:id:sgln:4012345.00001.0"},
     "ilmd": {"example:bestBeforeDate":"2014-12-10","example:batch":"XYZ" },
     "example:myField":"Example of a vendor/user extension"

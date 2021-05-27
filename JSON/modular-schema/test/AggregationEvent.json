@@ -7,7 +7,7 @@
     "childEPCs":["urn:epc:id:sgtin:0614141.107346.2017","urn:epc:id:sgtin:0614141.107346.2018"],
     "action": "OBSERVE",
     "bizStep": "receiving",
-    "disposition": "urn:epcglobal:cbv:disp:in_progress",
+    "disposition": "in_progress",
     "readPoint": {"id": "urn:epc:id:sgln:0614141.00777.0"},
     "bizLocation": {"id": "urn:epc:id:sgln:0614141.00888.0"},
     

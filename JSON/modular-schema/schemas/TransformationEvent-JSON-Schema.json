@@ -33,7 +33,7 @@
                             "$ref": "bizStep-JSON-Schema.json#/definitions/bizStep"
                         },
                         "disposition": {
-                            "$ref": "definitions-JSON-Schema.json#/definitions/uri"
+                            "$ref": "disposition-JSON-Schema.json#/definitions/disposition"
                         },
                         "persistentDisposition": {
                             "$ref": "definitions-JSON-Schema.json#/definitions/persistentDisposition"
