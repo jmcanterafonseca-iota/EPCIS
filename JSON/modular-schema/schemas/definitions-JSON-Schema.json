@@ -1,5 +1,5 @@
 {
-    "$id": "https://jmcanterafonseca-iota.github.io/EPCIS/JSON/modular-schema/definitions-JSON-Schema.json",
+    "$id": "https://jmcanterafonseca-iota.github.io/EPCIS/JSON/modular-schema/schemas/definitions-JSON-Schema.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "definitions": {
         "uri": {
