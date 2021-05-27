@@ -5,7 +5,7 @@
         "ObjectEvent": {
             "allOf": [
                 {
-                    "$ref": "EPCIS-Event-JSON-Schema.json#/definitions/Event"
+                    "$ref": "definitions-JSON-Schema.json#/definitions/Event"
                 },
                 {
                     "type": "object",
@@ -15,55 +15,55 @@
                             "enum": ["ObjectEvent"]
                         },
                         "epcList": {
-                            "$ref": "EPCIS-Event-JSON-Schema.json#/definitions/epcList"
+                            "$ref": "definitions-JSON-Schema.json#/definitions/epcList"
                         },
                         "quantityList": {
-                            "$ref": "EPCIS-Event-JSON-Schema.json#/definitions/quantityList"
+                            "$ref": "definitions-JSON-Schema.json#/definitions/quantityList"
                         },
                         "action": {
-                            "$ref": "EPCIS-Event-JSON-Schema.json#/definitions/action"
+                            "$ref": "definitions-JSON-Schema.json#/definitions/action"
                         },
                         "bizStep": {
-                            "$ref": "EPCIS-Event-JSON-Schema.json#/definitions/uri"
+                            "$ref": "definitions-JSON-Schema.json#/definitions/uri"
                         },
                         "disposition": {
-                            "$ref": "EPCIS-Event-JSON-Schema.json#/definitions/uri"
+                            "$ref": "definitions-JSON-Schema.json#/definitions/uri"
                         },
                         "persistentDisposition": {
-                            "$ref": "EPCIS-Event-JSON-Schema.json#/definitions/persistentDisposition"
+                            "$ref": "definitions-JSON-Schema.json#/definitions/persistentDisposition"
                         },
                         "readPoint": {
-                            "$ref": "EPCIS-Event-JSON-Schema.json#/definitions/readPoint"
+                            "$ref": "definitions-JSON-Schema.json#/definitions/readPoint"
                         },
                         "bizLocation": {
-                            "$ref": "EPCIS-Event-JSON-Schema.json#/definitions/bizLocation"
+                            "$ref": "definitions-JSON-Schema.json#/definitions/bizLocation"
                         },
                         "bizTransactionList": {
                             "type": "array",
                             "items": {
-                                "$ref": "EPCIS-Event-JSON-Schema.json#/definitions/bizTransaction"
+                                "$ref": "definitions-JSON-Schema.json#/definitions/bizTransaction"
                             }
                         },
                         "sourceList": {
                             "type": "array",
                             "items": {
-                                "$ref": "EPCIS-Event-JSON-Schema.json#/definitions/source"
+                                "$ref": "definitions-JSON-Schema.json#/definitions/source"
                             }
                         },
                         "destinationList": {
                             "type": "array",
                             "items": {
-                                "$ref": "EPCIS-Event-JSON-Schema.json#/definitions/destination"
+                                "$ref": "definitions-JSON-Schema.json#/definitions/destination"
                             }
                         },
                         "sensorElementList": {
                             "type": "array",
                             "items": {
-                                "$ref": "EPCIS-Event-JSON-Schema.json#/definitions/sensorElement"
+                                "$ref": "definitions-JSON-Schema.json#/definitions/sensorElement"
                             }
                         },
                         "ilmd": {
-                            "$ref": "EPCIS-Event-JSON-Schema.json#/definitions/ilmd"
+                            "$ref": "definitions-JSON-Schema.json#/definitions/ilmd"
                         }
                     },
                     "required": [
@@ -155,7 +155,7 @@
     },
     "allOf": [
         {
-            "$ref": "#definitions/ObjectEvent"
+            "$ref": "#/definitions/ObjectEvent"
         }
     ]
 }

@@ -4,7 +4,7 @@
 
     "oneOf": [
         {
-            "$ref": "ObjectEvent-JSON-Schema.json#/definitions/ObjectEvent"
+            "$ref": "EPCIS-Event-JSON-Schema.json#/definitions/EPCIS-Event"
         }
     ]
 }
