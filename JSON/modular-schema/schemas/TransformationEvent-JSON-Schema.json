@@ -12,7 +12,9 @@
                     "properties": {
                         "isA": {
                             "type": "string",
-                            "enum": ["TransformationEvent"]
+                            "enum": [
+                                "TransformationEvent"
+                            ]
                         },
                         "inputEPCList": {
                             "$ref": "event-definitions-JSON-Schema.json#/definitions/epcList"
@@ -74,7 +76,35 @@
                     },
                     "required": [
                         "isA"
-                    ]
+                    ],
+                    "propertyNames": {
+                        "anyOf": [
+                            {      
+                                "$ref": "event-definitions-JSON-Schema.json#/definitions/common-event-properties"
+                            },
+                            {
+                                "type": "string",
+                                "enum": [
+                                    "isA",
+                                    "inputEPCList",
+                                    "inputQuantityList",
+                                    "outputEPCList",
+                                    "outputQuantityList",
+                                    "transformationID",
+                                    "bizStep",
+                                    "disposition",
+                                    "persistentDisposition",
+                                    "readPoint",
+                                    "bizLocation",
+                                    "bizTransactionList",
+                                    "sourceList",
+                                    "destinationList",
+                                    "sensorElementList",
+                                    "ilmd"
+                                ]
+                            }
+                        ]
+                    }
                 },
                 {
                     "anyOf": [

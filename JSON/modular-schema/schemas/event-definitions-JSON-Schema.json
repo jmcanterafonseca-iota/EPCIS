@@ -328,11 +328,25 @@
             "required": [
                 "eventTime",
                 "eventTimeZoneOffset"
-            ],
-            "additionalProperties": true,
-            "patternProperties": {
-
-            }
+            ]
+        },
+        "common-event-properties": {
+            "anyOf": [
+                {
+                    "type": "string",
+                    "enum": [
+                        "@context",
+                        "eventTime",
+                        "recordTime",
+                        "eventTimeZoneOffset",
+                        "eventID",
+                        "errorDeclaration"
+                    ]
+                },
+                {
+                    "$ref": "definitions-JSON-Schema.json#/definitions/non-cbv-uri"
+                }
+            ]
         }
     }
 }

@@ -51,6 +51,18 @@
                     "not": {
                         "pattern": "^urn:epcglobal:cbv"
                     }
+                },
+                {
+                    "type": "string",
+                    "not": {
+                        "pattern": "^epcis:"
+                    }
+                },
+                {
+                    "type": "string",
+                    "not": {
+                        "pattern": "^https://ns.gs1.org/epcis/"
+                    }
                 }
             ]
         }
