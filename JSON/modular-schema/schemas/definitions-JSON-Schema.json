@@ -65,6 +65,10 @@
                     }
                 }
             ]
+        },
+        "required-ld-context": {
+            "type": "object",
+            "required": ["@context"]
         }
     }
 }
