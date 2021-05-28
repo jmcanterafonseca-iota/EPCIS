@@ -1,4 +1,5 @@
 {
+    "@context": "https://gs1.github.io/EPCIS/epcis-context.jsonld",
     "eventID": "ni:///sha-256;025ac144187a8c5e14caf4d1cfa69250a33dc59a5bc42a68d31b1b5e55a3f15a?ver=CBV2.0",
     "isA": "AssociationEvent",
     "eventTime": "2019-11-01T14:00:00.000+01:00",

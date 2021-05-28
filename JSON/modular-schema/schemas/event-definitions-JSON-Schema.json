@@ -156,7 +156,8 @@
             "required": [
                 "type",
                 "source"
-            ]
+            ],
+            "additionalProperties": false
         },
         "destination": {
             "type": "object",
@@ -171,7 +172,8 @@
             "required": [
                 "type",
                 "destination"
-            ]
+            ],
+            "additionalProperties": false
         },
         "sensorElement": {
             "type": "object",
@@ -294,7 +296,11 @@
             }
         },
         "ilmd": {
-            "type": "object"
+            "type": "object",
+            "propertyNames": {
+                "type": "string",
+                "format": "uri"
+            }
         },
         "Event": {
             "type": "object",
@@ -322,7 +328,11 @@
             "required": [
                 "eventTime",
                 "eventTimeZoneOffset"
-            ]
+            ],
+            "additionalProperties": true,
+            "patternProperties": {
+
+            }
         }
     }
 }
