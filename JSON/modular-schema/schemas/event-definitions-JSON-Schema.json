@@ -347,6 +347,22 @@
                     "$ref": "definitions-JSON-Schema.json#/definitions/non-cbv-uri"
                 }
             ]
+        },
+        "Extended-Event": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Event"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "isA": {
+                            "$ref": "definitions-JSON-Schema.json#/definitions/non-cbv-uri"
+                        }
+                    },
+                    "required": ["isA"]
+                }
+            ]
         }
     }
 }

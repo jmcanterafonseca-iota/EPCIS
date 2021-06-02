@@ -18,6 +18,9 @@
                 },
                 {
                     "$ref": "schemas/TransactionEvent-JSON-Schema.json#/definitions/TransactionEvent"
+                },
+                {
+                    "$ref": "schemas/event-definitions-JSON-Schema.json#/definitions/Extended-Event"
                 }
             ]
         },
@@ -68,6 +71,16 @@
                     "allOf": [
                         {
                             "$ref": "schemas/TransactionEvent-JSON-Schema.json#/definitions/TransactionEvent"
+                        },
+                        {
+                            "$ref": "schemas/definitions-JSON-Schema.json#/definitions/required-ld-context"
+                        }
+                    ]
+                },
+                {
+                    "allOf": [
+                        {
+                            "$ref": "schemas/event-definitions-JSON-Schema.json#/definitions/Extended-Event"
                         },
                         {
                             "$ref": "schemas/definitions-JSON-Schema.json#/definitions/required-ld-context"
