@@ -97,7 +97,7 @@ jsonld format -q ../JSON/Example_9.6.1-ObjectEvent.jsonld | \
 All JSON/JSON-LD examples declare their own context, usually something like this (first is the EPCIS context, then some custom extensions):
 
 ```json
-  "@context": ["https://gs1.github.io/EPCIS/epcis-context.jsonld",
+  "@context": ["https://jmcanterafonseca-iota.github.io/EPCIS/epcis-context.jsonld",
                {"example": "http://ns.example.com/epcis/"},
                {"gs1": "https://gs1.org/voc/"}],
 ```

@@ -19,13 +19,13 @@
   epcis:epcisBody  [ epcis:eventList  [ rdf:type                   epcis:ObjectEvent ;
                                         example1:myField           "Example of a vendor/user extension" ;
                                         epcis:action               "OBSERVE" ;
-                                        epcis:bizLocation          <urn:epc:id:sgln:0012345.11111.400> , <urn:epc:id:sgln:0012345.11111.0> ;
+                                        epcis:bizLocation          <urn:epc:id:sgln:0012345.11111.0> , <urn:epc:id:sgln:0012345.11111.400> ;
                                         epcis:bizStep              <urn:epcglobal:cbv:bizstep:receiving> ;
-                                        epcis:bizTransaction       [ epcis:bizTransaction      "urn:epcglobal:cbv:bt:0614141073467:1152"^^xsd:anyURI ;
-                                                                     epcis:bizTransactionType  <urn:epcglobal:cbv:btt:desadv>
-                                                                   ] ;
                                         epcis:bizTransaction       [ epcis:bizTransaction      "http://transaction.acme.com/po/12345678"^^xsd:anyURI ;
                                                                      epcis:bizTransactionType  <urn:epcglobal:cbv:btt:po>
+                                                                   ] ;
+                                        epcis:bizTransaction       [ epcis:bizTransaction      "urn:epcglobal:cbv:bt:0614141073467:1152"^^xsd:anyURI ;
+                                                                     epcis:bizTransactionType  <urn:epcglobal:cbv:btt:desadv>
                                                                    ] ;
                                         epcis:disposition          <urn:epcglobal:cbv:disp:in_progress> ;
                                         epcis:epcList              <urn:epc:id:sgtin:0614141.107346.2018> ;
@@ -41,12 +41,8 @@
                                                                      epcis:bizTransactionType  <urn:epcglobal:cbv:btt:po>
                                                                    ] ;
                                         epcis:disposition          <urn:epcglobal:cbv:disp:in_transit> ;
-                                        epcis:epcList              <urn:epc:id:sgtin:0614141.107346.2017> , <urn:epc:id:sgtin:0614141.107346.2018> ;
-                                        epcis:errorDeclaration     [ epcis:correctiveEventIDs  "urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6" , "ni:///sha-256;c6407ffcac52ec159528f2b556ba4ac3844c5aa48485c1fd61643e94f0a2d678?ver=CBV2.0" ;
-                                                                     epcis:declarationTime     "2021-02-01T22:46:31.117000+00:00"^^xsd:dateTimeStamp ;
-                                                                     epcis:reason              <urn:epcglobal:cbv:er:incorrect-data>
-                                                                   ] ;
-                                        epcis:eventID              "ni:///sha-256;aa49daa1fe0b773e0437e546078dc87de9c864d5b9babe84488f31478887fdf3?ver=CBV2.0" ;
+                                        epcis:epcList              <urn:epc:id:sgtin:0614141.107346.2018> , <urn:epc:id:sgtin:0614141.107346.2017> ;
+                                        epcis:eventID              "ni:///sha-256;df7bb3c352fef055578554f09f5e2aa41782150ced7bd0b8af24dd3ccb30ba69?ver=CBV2.0" ;
                                         epcis:eventTime            "2005-04-03T20:33:31.116000-06:00"^^xsd:dateTimeStamp ;
                                         epcis:eventTimeZoneOffset  "-06:00"
                                       ]

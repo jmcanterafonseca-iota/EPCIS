@@ -1,0 +1,74 @@
+@prefix cbv:         <https://ns.gs1.org/cbv/> .
+@prefix cbvmda:      <urn:epcglobal:cbv:mda:> .
+@prefix dcterms:     <http://purl.org/dc/terms/> .
+@prefix epcis:       <https://ns.gs1.org/epcis/> .
+@prefix example-mda: <http://epcis.example.com/mda/> .
+@prefix example1:    <http://ns.example.com/epcis/> .
+@prefix example2:    <http://epcis.example.com/ns/> .
+@prefix gs1:         <https://gs1.org/voc/> .
+@prefix md:          <https://ns.gs1.org/epcismd/> .
+@prefix owl:         <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vtype:       <urn:epcglobal:epcis:vtype:> .
+@prefix xsd:         <http://www.w3.org/2001/XMLSchema#> .
+
+[ rdf:type         epcis:EPCISDocument ;
+  dcterms:created  "2005-07-11T11:30:47.0Z" ;
+  owl:versionInfo  "2.0" ;
+  epcis:epcisBody  [ epcis:eventList  [ rdf:type                   epcis:AggregationEvent ;
+                                        epcis:action               "ADD" ;
+                                        epcis:bizLocation          <urn:epc:id:sgln:4012345.00025.0> ;
+                                        epcis:bizStep              <urn:epcglobal:cbv:bizstep:packing> ;
+                                        epcis:childQuantityList    [ epcis:epcClass  <urn:epc:class:lgtin:4012345.011111.1234> ;
+                                                                     epcis:quantity  5.2E1 ;
+                                                                     epcis:uom       "KGM"
+                                                                   ] ;
+                                        epcis:disposition          <urn:epcglobal:cbv:disp:in_progress> ;
+                                        epcis:eventID              "ni:///sha-256;18454584ed96fbb533e4a69b01eefd1bff3edd1e80ef8598957111f4477a0a64?ver=CBV2.0" ;
+                                        epcis:eventTime            "2019-10-07T15:30:00.000+01:00"^^xsd:dateTimeStamp ;
+                                        epcis:eventTimeZoneOffset  "+01:00" ;
+                                        epcis:parentID             <urn:epc:id:sscc:4012345.0111111111> ;
+                                        epcis:sensorElementList    [ epcis:sensorMetadata  [ epcis:dataProcessingMethod  <https://example.com/gdti/4012345000054987> ;
+                                                                                             epcis:deviceID              <urn:epc:id:giai:4000001.111> ;
+                                                                                             epcis:deviceMetadata        <https://id.gs1.org/8004/4000001111> ;
+                                                                                             epcis:rawData               <https://example.org/8004/401234599999> ;
+                                                                                             epcis:time                  "2019-07-19T14:00:00.000+01:00"^^xsd:dateTimeStamp
+                                                                                           ] ;
+                                                                     epcis:sensorReport    [ epcis:measurementType  gs1:MT-AmountOfSubstancePerUnitVolume ;
+                                                                                             epcis:uom              "C35"
+                                                                                           ] ;
+                                                                     epcis:sensorReport    [ epcis:measurementType  gs1:MT-AmountOfSubstancePerUnitVolume ;
+                                                                                             epcis:uom              "C35"
+                                                                                           ] ;
+                                                                     epcis:sensorReport    [ epcis:measurementType  gs1:MT-Humidity ;
+                                                                                             epcis:uom              "A93"
+                                                                                           ]
+                                                                   ] ;
+                                        epcis:sensorElementList    [ example1:furtherSensorData  [ example1:measure2
+                                                                                       "0.987" ] ;
+                                                                     example1:furtherSensorData  [ example1:measure1
+                                                                                       "123.5" ] ;
+                                                                     epcis:sensorMetadata        [ example1:someFurtherMetaData
+                                                                                       "someText" ] ;
+                                                                     epcis:sensorReport          [ epcis:measurementType
+                                                                                       example1:someSensorProperty ] ;
+                                                                     epcis:sensorReport          [ example1:cv            "123" ;
+                                                                                                   epcis:measurementType  gs1:MT-Temperature ;
+                                                                                                   epcis:uom              "CEL"
+                                                                                                 ]
+                                                                   ] ;
+                                        epcis:sensorElementList    [ epcis:sensorReport  [ epcis:measurementType
+                                                                                       example1:someSensorProperty ] ;
+                                                                     epcis:sensorReport  [ epcis:dataProcessingMethod  <https://example.com/gdti/4012345000054987> ;
+                                                                                           epcis:deviceID              <urn:epc:id:giai:4000001.111> ;
+                                                                                           epcis:deviceMetadata        <https://id.gs1.org/8004/4000001111> ;
+                                                                                           epcis:measurementType       gs1:MT-Temperature ;
+                                                                                           epcis:rawData               <https://example.org/8004/401234599999> ;
+                                                                                           epcis:time                  "2019-07-19T14:00:00.000+01:00"^^xsd:dateTimeStamp ;
+                                                                                           epcis:uom                   "CEL"
+                                                                                         ]
+                                                                   ]
+                                      ]
+                   ]
+] .
