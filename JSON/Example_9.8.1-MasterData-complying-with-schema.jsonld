@@ -1,5 +1,13 @@
 {
-    "@context": ["https://gs1.github.io/EPCIS/epcis-context.jsonld",{"example": "http://ns.example.com/epcis/"},{"xmda": "http://epcis.example.com/mda"}],
+	"@context": [
+		"https://jmcanterafonseca-iota.github.io/EPCIS/epcis-context.jsonld",
+		{
+			"example": "http://ns.example.com/epcis/"
+		},
+		{
+			"xmda": "http://epcis.example.com/mda"
+		}
+	],
 	"id": "_:example_9.8.1",
 	"isA": "EPCISDocument",
 	"schemaVersion": "2.0",
@@ -13,8 +21,14 @@
 							"isA": "urn:epcglobal:epcis:vtype:BusinessLocation",
 							"id": "urn:epc:id:sgln:0037000.00729.0",
 							"attributes": [
-								{ "id": "xmda:latitude", "attribute": "+18.0000" },
-								{ "id": "xmda:longitude", "attribute": "-70.0000" },
+								{
+									"id": "xmda:latitude",
+									"attribute": "+18.0000"
+								},
+								{
+									"id": "xmda:longitude",
+									"attribute": "-70.0000"
+								},
 								{
 									"id": "xmda:address",
 									"attribute": {
@@ -39,7 +53,10 @@
 							"isA": "urn:epcglobal:epcis:vtype:BusinessLocation",
 							"id": "urn:epc:id:sgln:0037000.00729.8202",
 							"attributes": [
-								{ "id": "cbvmda:sst", "attribute": "202" }
+								{
+									"id": "cbvmda:sst",
+									"attribute": "202"
+								}
 							],
 							"children": [
 								"urn:epc:id:sgln:0037000.00729.8203"
@@ -49,8 +66,14 @@
 							"isA": "urn:epcglobal:epcis:vtype:BusinessLocation",
 							"id": "urn:epc:id:sgln:0037000.00729.8203",
 							"attributes": [
-								{ "id": "cbvmda:sst", "attribute": "202" },
-								{ "id": "cbvmda:ssa", "attribute": "402" }
+								{
+									"id": "cbvmda:sst",
+									"attribute": "202"
+								},
+								{
+									"id": "cbvmda:ssa",
+									"attribute": "402"
+								}
 							]
 						}
 					]
@@ -61,23 +84,38 @@
 							"isA": "urn:epcglobal:epcis:vtype:ReadPoint",
 							"id": "urn:epc:id:sgln:0037000.00729.8201",
 							"attributes": [
-								{ "id": "cbvmda:site", "attribute": "0037000007296" },
-								{ "id": "cbvmda:sst", "attribute": 201 }
+								{
+									"id": "cbvmda:site",
+									"attribute": "0037000007296"
+								},
+								{
+									"id": "cbvmda:sst",
+									"attribute": 201
+								}
 							]
 						},
 						{
 							"isA": "urn:epcglobal:epcis:vtype:ReadPoint",
 							"id": "urn:epc:id:sgln:0037000.00729.8202",
 							"attributes": [
-								{ "id": "cbvmda:site", "attribute": "0037000007296" },
-								{ "id": "cbvmda:sst", "attribute": "202" }
+								{
+									"id": "cbvmda:site",
+									"attribute": "0037000007296"
+								},
+								{
+									"id": "cbvmda:sst",
+									"attribute": "202"
+								}
 							]
 						},
 						{
 							"isA": "urn:epcglobal:epcis:vtype:ReadPoint",
 							"id": "urn:epc:id:sgln:0037000.00729.8203",
 							"attributes": [
-								{ "id": "cbvmda:sst", "attribute": 204 }
+								{
+									"id": "cbvmda:sst",
+									"attribute": 204
+								}
 							]
 						}
 					]

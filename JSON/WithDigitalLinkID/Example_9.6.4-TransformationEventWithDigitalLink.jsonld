@@ -1,5 +1,10 @@
 {
-  "@context": ["https://gs1.github.io/EPCIS/epcis-context.jsonld",{"example": "http://ns.example.com/epcis/"}],
+  "@context": [
+    "https://jmcanterafonseca-iota.github.io/EPCIS/epcis-context.jsonld",
+    {
+      "example": "http://ns.example.com/epcis/"
+    }
+  ],
   "id": "_:document1",
   "isA": "EPCISDocument",
   "schemaVersion": "2.0",
@@ -11,11 +16,24 @@
         "isA": "TransformationEvent",
         "eventTime": "2013-10-31T14:58:56.591Z",
         "eventTimeZoneOffset": "+02:00",
-        "inputEPCList": [ "urn:epc:id:sgtin:4012345.011122.25", "urn:epc:id:sgtin:4000001.065432.99886655" ],
+        "inputEPCList": [
+          "urn:epc:id:sgtin:4012345.011122.25",
+          "urn:epc:id:sgtin:4000001.065432.99886655"
+        ],
         "inputQuantityList": [
-          { "epcClass": "urn:epc:class:lgtin:4012345.011111.4444", "quantity": 10, "uom": "KGM" },
-          { "epcClass": "https://id.gs1.org/01/00614141777778/10/987", "quantity": 30 },
-          { "epcClass": "https://id.gs1.org/01/04012345666663", "quantity": 220 }
+          {
+            "epcClass": "urn:epc:class:lgtin:4012345.011111.4444",
+            "quantity": 10,
+            "uom": "KGM"
+          },
+          {
+            "epcClass": "https://id.gs1.org/01/00614141777778/10/987",
+            "quantity": 30
+          },
+          {
+            "epcClass": "https://id.gs1.org/01/04012345666663",
+            "quantity": 220
+          }
         ],
         "outputEPCList": [
           "urn:epc:id:sgtin:4012345.077889.25",
@@ -25,7 +43,9 @@
         ],
         "bizStep": "urn:epcglobal:cbv:bizstep:commissioning",
         "disposition": "urn:epcglobal:cbv:disp:in_progress",
-        "readPoint": {"id": "urn:epc:id:sgln:4012345.00001.0"},
+        "readPoint": {
+          "id": "urn:epc:id:sgln:4012345.00001.0"
+        },
         "ilmd": {
           "example:bestBeforeDate": "2014-12-10",
           "example:batch": "XYZ"
@@ -35,4 +55,3 @@
     ]
   }
 }
-
